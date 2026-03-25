@@ -170,8 +170,8 @@ function HomePage() {
           Your <span>Complete Business Partner</span>
         </p>
         <div className="hero-cta fade-up delay-4">
-          <a href="#services" className="btn-primary">Explore Services</a>
-          <a href="#contact" className="btn-secondary">Work With Us</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }) }} className="btn-primary">Explore Services</a>
+          <a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }} className="btn-secondary">Work With Us</a>
         </div>
       </section>
 
@@ -233,13 +233,13 @@ function HomePage() {
                   <li key={j} className={f.active ? '' : 'muted'}>{f.text}</li>
                 ))}
               </ul>
-              <a href="#contact" className={`btn-plan ${plan.btnStyle}`}>Get Started</a>
+              <a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }} className={`btn-plan ${plan.btnStyle}`}>Get Started</a>
             </div>
           ))}
         </div>
 
         <p className="pricing-custom">
-          Need something custom? <a href="#contact">Let's talk →</a>
+          Need something custom? <a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) }}>Let's talk →</a>
         </p>
       </section>
 

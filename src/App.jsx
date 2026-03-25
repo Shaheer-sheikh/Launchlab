@@ -23,10 +23,10 @@ function App() {
           {menuOpen ? '✕' : '☰'}
         </button>
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
-          <li><a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false) }}>Home</a></li>
+          <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false) }}>Services</a></li>
+          <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false) }}>Pricing</a></li>
+          <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setMenuOpen(false) }}>Contact</a></li>
         </ul>
       </nav>
 
